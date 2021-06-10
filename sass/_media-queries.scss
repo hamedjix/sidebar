@@ -1,0 +1,53 @@
+$xl-screen: 2560px;
+$lg-screen: 1440px;
+$laptop-screen: 1024px;
+$tablet-screen: 768px;
+$mobile-screen: 425px;
+
+@media screen and (min-width: $xl-screen) {
+  html {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: $lg-screen) and (max-width: $xl-screen) {
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: $laptop-screen) and (max-width: $lg-screen) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media screen and (min-width: $tablet-screen) and (max-width: $laptop-screen) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: $tablet-screen) {
+  .sidebar {
+    width: $sidebar-tablet-width;
+    .links_name {
+      display: none;
+    }
+    .logo_name {
+      display: none;
+    }
+    // #sidebar_btn {
+    //   right: 50%;
+    //   transform: translateX(50%);
+    // }
+    .nav_list {
+      li {
+        &:hover .tooltip {
+          top: 50%;
+          transition: all 0.5s ease;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .main-content {
+    padding-right: $sidebar-tablet-width;
+  }
+}
